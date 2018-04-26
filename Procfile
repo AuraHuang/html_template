@@ -1,1 +1,1 @@
-web: gunicorn htm_template.wsgi --log-file -
+web: gunicorn html_template.wsgi --log-file -

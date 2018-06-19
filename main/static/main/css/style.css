@@ -50,6 +50,8 @@ html {
 
 	box-sizing: border-box;
 
+	font-family: 'Open Sans', '微軟正黑體', sans-serif;
+
 }
 
 input, textarea {
@@ -96,7 +98,8 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 
 	vertical-align: baseline;
 
-	border: 0;
+	/*border: 0;*/
+	border: 1px solid black;
 
 	outline: 0;
 
@@ -153,6 +156,13 @@ a {
 	transition-timing-function: ease;
 
 }
+
+/*blue: #282F44
+yellow: #E6AF2E
+light yello: #F5D061
+light gray: #ECECEC
+red: #fb5353*/
+
 
 a:focus, img:focus, button:focus, .btn:focus {outline: none;}
 
@@ -218,11 +228,11 @@ main[role="main-home-wrapper"],main[role="main-inner-wrapper"] { padding-bottom:
 
 main[role="main-home-wrapper"] article[role="pge-title-content"],main[role="main-inner-wrapper"] article[role="pge-title-content"]{ padding-left:41px}
 
-main[role="main-home-wrapper"] article[role="pge-title-content"] header,main[role="main-inner-wrapper"] article[role="pge-title-content"] header{ padding-bottom:19px; padding-top:83px}
+main[role="main-home-wrapper"] article[role="pge-title-content"] header,main[role="main-inner-wrapper"] article[role="pge-title-content"] header{ padding-bottom:80px; padding-top:80px}
 
 main[role="main-home-wrapper"] article[role="pge-title-content"] header h2,main[role="main-inner-wrapper"] article[role="pge-title-content"] header h2{ font-size:46px; line-height:53px; color:#404040; font-weight:800}
 
-main[role="main-home-wrapper"] article[role="pge-title-content"] header h2 span,main[role="main-inner-wrapper"] article[role="pge-title-content"] header h2 span{ display:block; font-size:80px; color:#fb5353; padding-bottom:15px}
+main[role="main-home-wrapper"] article[role="pge-title-content"] header h2 span,main[role="main-inner-wrapper"] article[role="pge-title-content"] header h2 span{ display:block; font-size:80px; color:#E6AF2E; padding-bottom:15px}
 
 main[role="main-home-wrapper"] article[role="pge-title-content"] p,main[role="main-inner-wrapper"] article[role="pge-title-content"] p{ font-size:20px; line-height:30px; color:#454545}
 

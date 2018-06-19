@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from django.http import JsonResponse
 
 def index(requests):
     return render(requests, 'main/index.html')
@@ -19,3 +19,11 @@ def blog_details(requests):
 
 def contact(requests):
     return render(requests, 'main/contact.html')
+
+
+# def home_filter(requests, filt_num):
+#     num = requests.GET.get('numbers', None)
+#     data = {
+#         'filt_data': Product.objects.filter(id = num)
+#     }
+#     return JsonResponse(data)

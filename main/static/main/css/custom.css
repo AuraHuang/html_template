@@ -1,0 +1,60 @@
+/*blue: #282F44
+yellow: #E6AF2E
+light yello: #F5D061
+light gray: #ECECEC
+red: #fb5353*/
+
+/*revise*/
+.grid{
+	overflow: visible !important;
+}
+
+
+/*custom*/
+.dropdown_gp{
+
+	font-size: 20px;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 10px;
+
+}
+
+.dropdown_gp label, .input_gp label{
+
+	padding: 5px 0px;
+	margin-right: 10px;
+
+}
+
+.btn_gp{
+
+	position: relative;
+
+}
+
+.btn_dropdown{
+
+	min-width: 150px;
+	padding: 5px 20px;
+	user-select: none;
+
+
+}
+
+.dropdown_menu{
+
+	width: 100%;
+	position: absolute;
+	display: block;
+	z-index: 999;
+	background-color: #ECECEC;
+
+}
+
+.dropdown_list{
+
+	list-style: none;
+	cursor: pointer;
+
+}

@@ -2,6 +2,7 @@
 
  <html>
 {% load static %}
+{% csrf_token %}
     <head>
 
     	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -144,18 +145,30 @@
                         </div>
 
                     </div> -->
-
+                <form method="get" accept-charset="utf-8">
+                
                     <div class="dropdown_gp">
 
                         <label>預估報酬率</label>
 
-                        <div class="btn_gp">
+                        <select class="btn_gp" id="rtn_btn">
 
-                            <button class="btn_dropdown" id="rtn_btn">請選擇</button>
+                            <!-- <button class="btn_dropdown" id="rtn_btn">請選擇</button>
 
-                            <ul class="dropdown_menu" id="rtn_list"></ul>
+                            <ul class="dropdown_menu" id="rtn_list"></ul> -->
 
-                        </div>
+                            <!-- <button class="btn_dropdown" id="time_btn">請選擇</button>
+
+                            <ul class="dropdown_menu" id="time_list"></ul> -->
+                            <option value='0-10'>0%-10%</option>
+                            <option value='10-20'>10%-20%</option>
+                            <option value='20-30'>20%-30%</option>
+                            <option value='30-40'>40%-50%</option>
+                            <option value='40-50'>40%-50%</option>
+                            <option value='50-600'>50%以上</option>
+
+
+                        </select>
 
                     </div>
 
@@ -163,16 +176,20 @@
 
                         <label>預測期間</label>
 
-                        <div class="btn_gp">
+                        <select class="btn_gp" id="time_btn">
 
-                            <button class="btn_dropdown" id="time_btn">請選擇</button>
+                            <!-- <button class="btn_dropdown" id="time_btn">請選擇</button>
 
-                            <ul class="dropdown_menu" id="time_list"></ul>
+                            <ul class="dropdown_menu" id="time_list"></ul> -->
+                            <option value=5>單週</option>
+                            <option value=10>雙週</option>
+                            <option value=20>1個月</option>
+                            <option value=60>1季</option>
 
-                        </div>
+                        </select>
 
                     </div>
-
+</form>
                     <!-- <div class="interval_gp">
 
                         <label>股價區間</label> -->
@@ -192,6 +209,25 @@
                     </div> -->
 
                     <!-- http://www.tse.com.tw/zh/news/newsDetail/?id=606 26類股 -->
+                    <!-- <div class="dropdown_gp">
+
+                        <label>產業類別</label>
+
+                        <select class="btn_gp">
+
+                            <button class="btn_dropdown" id="time_btn">請選擇</button>
+
+                            <ul class="dropdown_menu" id="industry_cate"></ul>
+                            <option value=5>單週</option>
+                            <option value=10>雙週</option>
+                            <option value=20>1個月</option>
+                            <option value=60>1季</option>
+
+                        </select>
+
+                    </div> -->
+
+                    <button id="submit_btn">送出</button>
 
                 </section>                
 
@@ -629,7 +665,8 @@
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="{% static 'main/js/jquery.min.js' %}" type="text/javascript"></script>
-
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.map"></script> -->
         <!-- custom -->
 
 		<script src="{% static 'main/js/nav.js' %}" type="text/javascript"></script>

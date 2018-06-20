@@ -6,6 +6,15 @@ def index(requests):
     return render(requests, 'main/index.html')
 
 def works_details(requests):
+    # context = {
+    #     'items_code' : items_code,
+    #     'items_name' : items_name,
+    #     'items_category' : items_category,
+    #     'items_Cprice' : items_Cprice,
+    #     'items_time' : items_time,
+    #     'items_Pprice' : items_Pprice,
+    #     'items_rtn' : items_rtn,
+    # }
     return render(requests, 'main/works_details.html')
 
 def about(requests):

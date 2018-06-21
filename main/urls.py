@@ -17,6 +17,6 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
 
     # ajax response
-    # path('<int:filt_num>/', views.home_filter, name='filt_numbers'),
+   path('ajax/filter/', views.filter_condiction, name='filt_condic'),
 
 ]

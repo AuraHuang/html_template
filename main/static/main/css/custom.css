@@ -9,8 +9,15 @@ red: #fb5353*/
 	overflow: visible !important;
 }
 
-
 /*custom*/
+.background_img{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background: url('/static/main/images/background.jpg');
+	z-index: 999;
+}
+
 .dropdown_gp{
 
 	font-size: 20px;
@@ -56,5 +63,17 @@ red: #fb5353*/
 
 	list-style: none;
 	cursor: pointer;
+
+}
+
+.submit_btn{
+
+	font-size: 20px;
+	padding: 10px;
+	text-decoration: none !important;
+	font-weight: 600;
+	background-color: rgba(255,255,255,0.5);
+	width: 100%;
+	display: block;
 
 }

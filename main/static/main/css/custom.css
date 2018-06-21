@@ -10,13 +10,13 @@ red: #fb5353*/
 }
 
 /*custom*/
-.background_img{
+/*.background_img{
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
 	background: url('/static/main/images/background.jpg');
 	z-index: 999;
-}
+}*/
 
 .dropdown_gp{
 

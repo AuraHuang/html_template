@@ -104,6 +104,35 @@
         <!-- main -->
 
         <main role="main-home-wrapper" class="container">
+    
+
+<!-- ###################################################################################### -->
+            <div class="row">
+                {% if result  %}
+                    {% for data in result %}
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                          <div class="card-header">
+                            {{data.items_name}}
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">產也類別：{{data.items_category}}</h5>
+                            <h5 class="card-title">代碼：{{data.items_code}}</h5>
+                            <h5 class="card-title">報酬率：{{data.items_rtn}} %</h5>
+                            <a href="/works_details/" class="btn btn-primary">Details</a>
+                          </div>
+                          <div class="card-footer text-muted">
+                            預測天數：{{data.items_time}}
+                          </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <h1>找不到資料</h1>>
+                {% endif %}
+            </div>
+            
+<!-- ###################################################################################### -->
 
         	
 
@@ -163,7 +192,7 @@
                             <option value='0-10'>0%-10%</option>
                             <option value='10-20'>10%-20%</option>
                             <option value='20-30'>20%-30%</option>
-                            <option value='30-40'>40%-50%</option>
+                            <option value='30-40'>30%-40%</option>
                             <option value='40-50'>40%-50%</option>
                             <option value='50-600'>50%以上</option>
 
@@ -227,7 +256,15 @@
 
                     </div> -->
 
-                    <button id="submit_btn">送出</button>
+                    <!-- <button id="submit_btn">送出</button> -->
+
+
+<!-- ###################################################################################### -->
+
+                    <a id='filt_link' href="{% url 'indexs' '0-10' 5 %}">送出囉!</a>
+                    
+<!-- ###################################################################################### -->
+
 
                 </section>                
 
@@ -275,7 +312,7 @@
 
                                     <p>Project for Thonik, design studio based in Amsterdam</p>
 
-                                    <a href="works_details">View more</a>
+                                    <a href="/works_details">View more</a>
 
                                 
 

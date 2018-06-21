@@ -133,45 +133,61 @@ $(document).ready(function() {
 //     }
 // });
 
-$("#submit_btn").click(function () {
-      var day = $("#time_btn").val();
-      var return_rates = $("#rtn_btn").val();
+// $("#submit_btn").click(function () {
+//       var day = $("#time_btn").val();
+//       var return_rates = $("#rtn_btn").val();
 
-      $.ajax({
-        type:'GET',
-        url: '/ajax/filter/',
-        data: {
-          'day': day,
-          'return_rate': return_rates
-        },
-        success: function (data) {
-          // console.log(data.filt_result)
+//       $.ajax({
+//         type:'GET',
+//         url: '/ajax/filter/',
+//         data: {
+//           'day': day,
+//           'return_rate': return_rates
+//         },
+//         success: function (data) {
+//           // console.log(data.filt_result)
           
           
-          // ### 更新前端UI
-          results = $.parseJSON(data.filt_result);
-          console.log(results.length)
-          // 判斷搜尋是否有資料
-          if (results != 0) { //收尋到資料
-            // console.log(r[0].fields.items_name)
-            for(var i=0; i<results.length; i++){
-              contents = results[i].fields
+//           // ### 更新前端UI
+//           results = $.parseJSON(data.filt_result);
+//           console.log(results.length)
+//           // 判斷搜尋是否有資料
+//           if (results != 0) { //收尋到資料
+//             // console.log(r[0].fields.items_name)
+//             for(var i=0; i<results.length; i++){
+//               contents = results[i].fields
 
-              console.log(contents.items_name)
-              console.log(contents.items_code)
-              console.log(contents.items_category)
-              console.log(contents.items_time)
-              console.log(contents.items_rtn)
-              console.log('******************')
-            }
+//               console.log(contents.items_name)
+//               console.log(contents.items_code)
+//               console.log(contents.items_category)
+//               console.log(contents.items_time)
+//               console.log(contents.items_rtn)
+//               console.log('******************')
+//             }
             
-          }else{ //搜尋失敗，沒找到資料
-            alert("沒有找到符合的搜尋條件.");
-          }
-        }
-      });
+//           }else{ //搜尋失敗，沒找到資料
+//             alert("沒有找到符合的搜尋條件.");
+//           }
+//         }
+//       });
 
-    });
+//     });
+
+
+  $('#rtn_btn').change(function(){
+    var day = $("#time_btn").val();
+    var return_rates = $("#rtn_btn").val();
+    links = '/'+return_rates+ '/'+day
+    $("#filt_link").attr('href', links);
+  });
+
+
+  $('#time_btn').change(function(){
+    var day = $("#time_btn").val();
+    var return_rates = $("#rtn_btn").val();
+    links = '/'+return_rates+ '/'+day
+    $("#filt_link").attr('href', links);
+  });
 
 });
 

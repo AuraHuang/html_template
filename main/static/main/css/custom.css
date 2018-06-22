@@ -18,12 +18,26 @@ red: #fb5353*/
 	z-index: 999;
 }*/
 
+.condition_form{
+
+	padding: 20px;
+	text-align: center;
+
+}
+
+.condition_none{
+
+	text-align: center;
+	padding: 20px;
+
+}
+
 .dropdown_gp{
 
 	font-size: 20px;
 	display: flex;
 	flex-direction: row;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 
 }
 
@@ -69,11 +83,164 @@ red: #fb5353*/
 .submit_btn{
 
 	font-size: 20px;
-	padding: 10px;
+	padding: 10px 30px;
 	text-decoration: none !important;
 	font-weight: 600;
-	background-color: rgba(255,255,255,0.5);
-	width: 100%;
-	display: block;
+	background-color: transparent;
+	border: 2px solid #282F44;
+	border-radius: 3em;
+	color: #282F44;
 
+}
+.submit_btn:hover{
+	background-color: #282F44;
+	color: white;
+	font-weight: 500;
+}
+
+
+.item_display{
+
+	font-size: 22px;
+	margin: 10px;
+	position: relative;
+
+}
+.item_link{
+
+	width: 100%;
+	height: 100%;
+	display: block;
+	text-decoration: none !important;
+	color: rgba(0,0,0,0.8);
+	padding: 30px;
+	border-radius: 3px;
+	background-color: rgba(245, 208, 97,0.3);
+
+}
+.item_link:hover{
+
+	background-color: rgba(0,0,0,0.8);
+	color: rgba(0,0,0,0.8);
+}
+
+.detail_info{
+
+	display: none;
+	position: absolute;
+	color: #E6AF2E;
+	font-weight: 600;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.item_link:hover .detail_info{
+
+	display: block;
+	opacity: 0;
+	animation: card_moveup 1.5s both;
+
+
+}
+@keyframes card_moveup{
+	0%{
+		opacity: 0;
+		bottom: 10px;
+	}
+	100%{
+		opacity: 1;
+		bottom: 50%;
+		transform: translate(-50%,50%);
+	}
+}
+
+
+.detail_btn{
+
+	/*width: */
+
+}
+
+.founder_intro{
+
+	background-color: #282F44;
+	display: block;
+	height: 10px;
+
+}
+
+.official_web{
+
+	margin-bottom: 20px;
+
+}
+
+.work-details p{
+
+	font-size: 22px;
+
+}
+
+.info_link_gp{
+
+	margin-top: 50px;
+
+}
+
+.info_link{
+
+	margin-right: 10px;
+	font-size: 20px;
+	padding: 10px 30px;
+	text-decoration: none !important;
+	font-weight: 600;
+	background-color: transparent;
+	border: 2px solid #282F44;
+	border-radius: 3em;
+	color: #282F44;
+
+}
+.info_link:hover{
+	background-color: #282F44;
+	color: white;
+	font-weight: 500;
+}
+
+.contact_info{
+
+	font-size: 18px;
+	font-weight: 600;
+
+
+}
+.contact_info li{
+	margin-bottom: 10px;
+}
+.contact_info a:hover{
+
+	color: #282F44;
+
+}
+.contact_info a{
+	text-decoration: none !important;
+	color: #282F44;
+}
+
+.contact_submit{
+	text-decoration: none !important;
+	text-align: center;
+	display:block;
+	border:none; outline:none;
+	width:200px; line-height:60px;
+	text-transform:uppercase;
+	font-size:21px; color:#FFF;
+	font-weight:800;
+	letter-spacing:2px;
+	background-color:#282F44;
+	margin:41px auto;
+	margin-bottom:0;
+	transition-duration:0.5s;}
+
+.contact_submit:hover{
+	background-color:#E6AF2E;
+	color: white;
 }

@@ -16,7 +16,7 @@
 
         
 
-        <title>: : avana LLC | Contact : :</title>
+        <title>: : ChooStart | Contact : :</title>
 
 		<!-- <link rel="shortcut icon" href="{% static '/main/images/favicon.ico' %}" type="image/x-icon"> -->
 
@@ -25,6 +25,8 @@
         <!-- style -->
 
         <link href="{% static '/main/css/style.css' %}" rel="stylesheet" type="text/css">
+
+        <link href="{% static '/main/css/custom.css' %}" rel="stylesheet" type="text/css">
 
         <!-- style -->
 
@@ -66,7 +68,7 @@
 
                     	<h1>
 
-                        	<a href="/index" title="avana LLC"><img src="{% static '/main/images/logo.png' %}" title="avana LLC" alt="avana LLC"/></a>
+                        	<a href="/" title="avana LLC"><img src="{% static '/main/images/logo.png' %}" title="avana LLC" alt="avana LLC"/></a>
 
                         </h1>
 
@@ -78,11 +80,11 @@
 
                         <ul>
 
-                            <li><a href="/index" title="Work">Work</a></li>
+                            <li><a href="/" title="Work">Work</a></li>
 
                             <li><a href="/about" title="About">About</a></li>
 
-                            <li><a href="/blog" title="Blog">Blog</a></li>
+                            <!-- <li><a href="/blog" title="Blog">Blog</a></li> -->
 
                             <li class="nav-active"><a href="/contact" title="Contact">Contact</a></li>
 
@@ -114,11 +116,15 @@
 
                     	<header>
 
-                        	<h2><span>Hey Thr!</span> we love to hear you.</h2>
+                        	<h2><span>Hey Thr!</span>歡迎與我們聯繫</h2>
 
                         </header>
 
-                        <p><a href="tel:8197654321"><i class="fa fa-phone" aria-hidden="true"></i> +8197654321</a><a href="mailto:contact@avana.com"><i class="fa fa-envelope" aria-hidden="true"></i> contact@avana.com</a></p>
+                        <ul class="contact_info">
+                            <li><a href="tel:8197654321">+886912345678</a></li>
+                            <li><a href="mailto:contact@avana.com">contact@choostart.com</a></li>
+                            <li>地址：高雄市楠梓區卓越路2號</li>
+                        </ul>
 
                     </article>
 
@@ -154,13 +160,13 @@
 
                                 <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
 
-                                <input  name="name" id="name" type="text" placeholder="Whats your name">
+                                <input  name="name" id="name" type="text" placeholder="姓名">
 
                                 </div>
 
                                 <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
 
-                                <input  name="email" id="email" type="email"  placeholder="Whats your email">
+                                <input  name="email" id="email" type="email"  placeholder="Email">
 
                                 </div>
 
@@ -168,11 +174,12 @@
 
                             <div class="clearfix"></div>
 
-                            <textarea name="comments" id="comments" cols="" rows="" placeholder="Whats in your mind"></textarea>
+                            <textarea name="comments" id="comments" cols="" rows="" placeholder="信件內容"></textarea>
 
                             <div class="clearfix"></div>
 
-                            <input name="" type="submit" value="Send email">
+                            <!-- <input name="" type="submit" value="送出"> -->
+                            <a href="" class="contact_submit">送出</a>
 
                             <div id="simple-msg"></div>
 
@@ -200,7 +207,7 @@
 
                 <h1>
 
-                    <a href="/index" title="avana LLC"><img src="{% static '/main/images/logo.png' %}" title="avana LLC" alt="avana LLC"/></a>
+                    <a href="/" title="avana LLC"><img src="{% static '/main/images/logo.png' %}" title="avana LLC" alt="avana LLC"/></a>
 
                 </h1>
 
@@ -212,11 +219,11 @@
 
             	<ul>
 
-                	<li><a href="/index" title="Work">Work</a></li>
+                	<li><a href="/" title="Work">Work</a></li>
 
                     <li><a href="about.html" title="About">About</a></li>
 
-                    <li><a href="blog.html" title="Blog">Blog</a></li>
+                    <!-- <li><a href="blog.html" title="Blog">Blog</a></li> -->
 
                     <li><a href="contact.html" title="Contact">Contact</a></li>
 
@@ -226,7 +233,7 @@
 
             <!-- nav -->
 
-            <ul role="social-icons">
+            <!-- <ul role="social-icons">
 
             	<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 
@@ -236,9 +243,9 @@
 
                 <li><a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
 
-            </ul>
+            </ul> -->
 
-            <p class="copy-right">&copy; 2015  avana LLC.. All rights Resved</p>
+            <p class="copy-right">&copy; 2018  ChooStart. All rights Reserved</p>
 
         </footer>
 

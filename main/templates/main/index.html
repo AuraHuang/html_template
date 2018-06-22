@@ -55,7 +55,7 @@
 
 
 
-    <body>
+    <body style="background-image: url('{% static 'main/images/background.jpg' %}');">
 
     <!-- <img class="background_img" src="{% static 'main/images/background.jpg' %}"> -->
     <!-- <div class="background_img"></div> -->
@@ -86,7 +86,7 @@
 
                             <li><a href="/about" title="About">About</a></li>
 
-                            <li><a href="/blog" title="Blog">Blog</a></li>
+                            <!-- <li><a href="/blog" title="Blog">Blog</a></li> -->
 
                             <li><a href="/contact" title="Contact">Contact</a></li>
 
@@ -108,30 +108,7 @@
     
 
 <!-- ###################################################################################### -->
-            <div class="row">
-                {% if result  %}
-                    {% for data in result %}
-                    <div class="col-md-3">
-                        <div class="card text-center">
-                          <div class="card-header">
-                            {{data.items_name}}
-                          </div>
-                          <div class="card-body">
-                            <h5 class="card-title">產也類別：{{data.items_category}}</h5>
-                            <h5 class="card-title">代碼：{{data.items_code}}</h5>
-                            <h5 class="card-title">報酬率：{{data.items_rtn}} %</h5>
-                            <a href="/works_details/" class="btn btn-primary">Details</a>
-                          </div>
-                          <div class="card-footer text-muted">
-                            預測天數：{{data.items_time}}
-                          </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                {% else %}
-                    <h1>找不到資料</h1>>
-                {% endif %}
-            </div>
+            
             
 <!-- ###################################################################################### -->
 
@@ -175,7 +152,7 @@
                         </div>
 
                     </div> -->
-                <form method="get" accept-charset="utf-8">
+                <form method="get" accept-charset="utf-8" class="condition_form">
                 
                     <div class="dropdown_gp">
 
@@ -219,7 +196,7 @@
                         </select>
 
                     </div>
-</form>
+                </form>
                     <!-- <div class="interval_gp">
 
                         <label>股價區間</label> -->
@@ -293,7 +270,31 @@
 
                 <div class="clearfix"></div>
 
-
+                    <div class="row">
+                        {% if result  %}
+                            {% for data in result %}
+                            <div class="col-sm-12 col-md-6">
+                                <div class="card text-center item_display">
+                                    <a href="/works_details/" class="card-body item_link">
+                                        <div class="card-header">
+                                            <strong>{{data.items_code}}</strong> {{data.items_name}}
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- <h4 class="card-title">產業類別：{{data.items_category}}</h4> -->
+                                            <h4 class="item_industry">{{data.items_category}}</h4>
+                                            <h4 class="item_date">{{data.items_time}}</h4>
+                                            <!-- <h4 class="card-title">代碼：{{data.items_code}}</h4> -->
+                                            <!-- <h5 class="card-title">報酬率：{{data.items_rtn}} %</h5> -->
+                                            <div class="detail_info">觀看詳細資料</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                            <h1 class="condition_none">無符合條件標的，請重新選擇！</h1>
+                        {% endif %}
+                    </div>
 
                 <div class="clearfix"></div>
 
@@ -327,7 +328,7 @@
 
                     <li><a href="about" title="About">About</a></li>
 
-                    <li><a href="blog" title="Blog">Blog</a></li>
+                    <!-- <li><a href="blog" title="Blog">Blog</a></li> -->
 
                     <li><a href="contact" title="Contact">Contact</a></li>
 
@@ -337,7 +338,7 @@
 
             <!-- nav -->
 
-            <ul role="social-icons">
+            <!-- <ul role="social-icons">
 
             	<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 
@@ -345,11 +346,11 @@
 
                 <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 
-                <li><a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
 
-            </ul>
+            </ul> -->
 
-            <p class="copy-right">&copy; 2015  avana LLC.. All rights Resved</p>
+            <p class="copy-right">&copy; 2018  ChooStart. All rights Reserved</p>
 
         </footer>
 
